@@ -1,0 +1,15 @@
+data:
+  connector: local_files
+  note_embeddings_path: data/note_embeddings.csv
+  symptom_embeddings_path: data/symptom_embeddings.csv
+
+llm:
+  provider: openai
+  model: gpt-4.1-mini
+  api_key_env: OPENAI_API_KEY
+
+retrieval:
+  top_k_per_query: 5
+  max_semantic_units: 12
+  max_final_units: 20
+  min_similarity: 0.55

@@ -1,0 +1,15 @@
+data:
+  connector: databricks
+  note_embedding_table: prod_research.rdv0003327.note_unit_bioclinicalbert_embeddings
+  symptom_embedding_table: prod_research.rdv0003327.symptom_query_bioclinicalbert_embeddings
+
+llm:
+  provider: databricks
+  base_url: https://dbc-448dd177-09ad.cloud.databricks.com/serving-endpoints
+  model: databricks-gpt-5-4-mini
+
+retrieval:
+  top_k_per_query: 5
+  max_semantic_units: 12
+  max_final_units: 20
+  min_similarity: 0.55
